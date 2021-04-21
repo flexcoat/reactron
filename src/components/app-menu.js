@@ -10,8 +10,10 @@ import Welcome from './welcome';
 import BasicForm from './basic-form';
 import Command from './command';
 import AppAbout from './app-about';
-import Rest from './rest'
-import FS_Inifile from './fs_inifile'
+import Rest from './rest';
+import FS_Inifile from './fs_inifile';
+import Print from './print';
+import Holerith from './holerith';
 
 export default function AppMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -51,10 +53,9 @@ export default function AppMenu(props) {
         onClose={handleClose}
       >
         <MenuItem onClick={() => {handleClickOpt(Welcome)}}>Bem-vindo</MenuItem>
-        <MenuItem onClick={() => {handleClickOpt(BasicForm)}}>Formulario</MenuItem>
-        <MenuItem onClick={() => {handleClickOpt(Command)}}>Executa Comando</MenuItem>
-        <MenuItem onClick={() => {handleClickOpt(Rest)}}>Consome Rest</MenuItem>
-        <MenuItem onClick={() => {handleClickOpt(FS_Inifile)}}>Sistema de Arquivos / Ini File</MenuItem>
+
+        <MenuItem onClick={() => {handleClickOpt(Print)}}>Carregar Holerith</MenuItem>
+        <MenuItem onClick={() => {handleClickOpt(Holerith)}}>Imprimir Holerith</MenuItem>
         <Divider/>
         <MenuItem onClick={() => {handleClickOpt(AppAbout)}}>Sobre...</MenuItem>
       </Menu>
